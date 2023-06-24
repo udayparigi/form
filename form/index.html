@@ -1,0 +1,37 @@
+<html>
+<head>
+  <title>Form</title>
+  <meta name="viewport" content="width=device-width, initial-scale=0.5">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/128/3447/3447545.png" type="image/x-icon">
+  <script src="https://kit.fontawesome.com/eac6760322.js" crossorigin="anonymous"></script>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+  <div class="hero-section">
+    <div class="form-container">
+      <h2><u>Registration Form</u></h2>
+      <form name="myForm" onsubmit="return validateForm()" method="post">
+        <label for="fullName">Full Name:</label><br>
+        <input type="text" name="fullName" class="input" required><br><br>
+        <label for="email">Email ID:</label><br>
+        <input type="email" name="email" class="input" required><br><br>
+        <label for="phoneNumber">Phone Number:</label><br>
+        <input type="tel" name="phoneNumber" class="input" required><br><br>
+        <label for="password">Password:</label><br>
+        <input type="password" name="password" class="input" required><br><br>
+        <label for="confirmPassword">Confirm Password:</label><br>
+        <input type="password" name="confirmPassword" class="input" required><br><br>
+        <div id="verificationForm" onsubmit="return verifyHuman()">
+          <div class="g-recaptcha" data-sitekey="6LdNVscmAAAAAOUqlotGz1C1OSubBom_VWZJ8xir" required></div>
+        </div>
+        <div class="submit-container">
+          <input type="submit" class="submitbutton" onclick="openPopup()">
+        </div>
+      </form>
+    </div>
+  </div>
+  <script src="javascript.js"></script> 
+</body>
+</html>
